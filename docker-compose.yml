@@ -1,0 +1,7 @@
+services:
+  futuresboard-notificator:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./:/code/
+    working_dir: /code
