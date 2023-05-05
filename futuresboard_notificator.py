@@ -14,7 +14,18 @@ class FuturesboardNotificator:
         # Create an Apprise instance
         self.apobj = apprise.Apprise()
         #  pushbullet notification
-        self.apobj.add('pbul://' + self.config['PUSHBULLET_ACCESS_TOKEN'])
+        notification_services = 0
+        if 'PUSHBULLET_ACCESS_TOKEN' in self.config:
+            self.apobj.add(f"pbul://{self.config['PUSHBULLET_ACCESS_TOKEN']}")
+            notification_services += 1
+            print("Pushbullet notification service configured")
+        if 'NTFY_TOPIC' in self.config:
+            self.apobj.add(f"ntfy://{self.config['NTFY_TOPIC']}")
+            notification_services += 1
+            print("Ntfy notification service configured")
+        if notification_services == 0:
+            print("Error: No notification services configured")
+            exit(1)
         self.delay = 60 * int(self.config['DELAY_MINUTES'])
         print("ProfitNotification initialized")
 
