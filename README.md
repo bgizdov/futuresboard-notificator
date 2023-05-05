@@ -31,7 +31,10 @@ docker-compose up
 ```
 
 ### Links
-[Futuresboard](https://github.com/ecoppen/futuresboard)
+- [Futuresboard](https://github.com/ecoppen/futuresboard)
+- [apprise](https://github.com/caronc/apprise)
+- [ntfy](https://github.com/binwiederhier/ntfy)
+- [PushBullet](https://www.pushbullet.com/)
 
 ### TODO
 Some features that could be added to futuresboard notificator:
