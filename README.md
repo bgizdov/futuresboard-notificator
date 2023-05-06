@@ -1,5 +1,6 @@
 # Futuresboard Notificator
 This is a simple Python script designed to fetch today’s profit from the Futuresboard webpage and send notifications to Pushbullet and ntfy.
+Push notifications for binance and bybit profit.
 
 ### Configuration
 To get started, copy the .env.example file to a new file called .env. Then, update the environment variables with your domain name and Pushbullet access token and/or ntfy topic name.
